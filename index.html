@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <title>Portofolio | Ryuudev</title>
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+      .hero {
+        background-color: #f8f9fa;
+        padding: 100px 20px;
+        text-align: center;
+      }
+      .section {
+        padding: 60px 20px;
+      }
+      .offcanvas-start {
+        width: 250px !important;
+      }
+      #img-style {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-left: 35%;
+        margin-top: 10px;
+      }
+      .card {
+        border: 1.5px solid #0d6efd;
+        box-shadow: 0 0 10px rgba(13, 110, 253, 0.7); /* Efek glowing */
+        transition: 0.3s ease;
+      }
+
+      .card:hover {
+        box-shadow: 0 0 20px rgba(13, 110, 253, 1),
+          0 0 30px rgba(13, 110, 253, 0.5);
+        transform: scale(1.02);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- head & nav -->
+    <header>
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="#">RyuuDev</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-start text-bg-dark"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h6 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
+                Akhdan Aryasatya R.
+              </h6>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#home"
+                    >Beranda</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">Tentang</a>
+                </li>
+                <li class="nav-item"></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item"></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#projects">Project</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#home"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Social Media
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="https://wa.me/6281252456382"
+                        ><i class="bi bi-whatsapp me-2"></i>WhatsApp</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="https://www.instagram.com/8manryuu/"
+                        ><i class="bi bi-instagram me-2"></i>Instagram</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="https://www.tiktok.com/@8manryuu"
+                        ><i class="bi bi-tiktok me-2"></i>TikTok</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- beranda -->
+    <section class="hero" id="home">
+      <div class="container">
+        <h2 class="display-4 fw-bold mb-3">👋 Halo, Saya Akhdan</h2>
+        <p class="lead text-secondary">
+          Seorang <strong>Fullstack Developer Pemula</strong> yang sedang terus
+          belajar dan berkembang, sekaligus pelajar yang mendalami
+          <strong>bahasa & budaya Jepang</strong>.
+        </p>
+        <a href="#projects" class="btn btn-primary mt-3">Lihat Karya Saya</a>
+      </div>
+    </section>
+
+    <!-- tentang -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>Tentang Saya</h2>
+        <p class="lead text-secondary">
+          Halo! Nama saya <strong>Akhdan Aryasatya Ramadhani</strong>, biasa
+          dipanggil <strong>Ryuu</strong>. Saya adalah seorang
+          <strong>siswa kelas 11 jurusan Rekayasa Perangkat Lunak (RPL)</strong>
+          yang sedang menekuni dunia pemrograman dan pengembangan web.
+        </p>
+        <p class="text-secondary">
+          Meskipun saya seorang <strong>developer pemula</strong>, saya selalu
+          bersemangat untuk belajar teknologi baru, memperdalam bahasa Jepang,
+          dan membangun proyek sederhana yang bermanfaat. Dengan waktu yang
+          terbatas karena sering membantu orang tua, saya tetap berusaha
+          memanfaatkan setiap kesempatan untuk berkembang.
+        </p>
+        <p class="text-secondary">
+          Saya juga memiliki cita-cita untuk bisa bekerja di bidang IT dan suatu
+          hari nanti mewujudkan impian saya untuk berkarier di
+          <strong>Jepang</strong>. Selain programming, saya suka menonton anime,
+          bermain sepak bola, dan berbagi ilmu dengan teman-teman.
+        </p>
+      </div>
+    </section>
+
+    <!-- keahlianku -->
+    <section class="bg-light py-5" id="skills">
+      <div class="container">
+        <h2
+          class="text-center mb-5 fw-bold"
+          style="background-color: #f4f6fc; margin-bottom: 0"
+        >
+          🛠️ My Skills 🚀
+        </h2>
+        <p class="text-center text-muted mb-4">
+          Saya adalah seorang <strong>developer pemula</strong> yang sedang
+          dalam perjalanan belajar dan berkembang di dunia pemrograman. Berikut
+          ini adalah beberapa skill dasar yang telah saya pelajari sejauh ini.
+          Saya terus berusaha untuk menjadi lebih baik setiap harinya.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" id="skills-img">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/Gamedev.jpg"
+                class="card-img-top"
+                alt="Game Development"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Game Development</h5>
+                <p class="card-text">
+                  Membuat game dengan menggabungkan logika, visual, dan
+                  interaktivitas untuk menciptakan pengalaman bermain yang
+                  menyenangkan.
+                </p>
+                <a
+                  href="https://www.youtube.com/watch?v=IlKaB1etrik"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/Webdevelopment.jpg"
+                class="card-img-top"
+                alt="Web Development"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Web Development</h5>
+                <p class="card-text">
+                  Mengembangkan situs web lengkap dari frontend hingga backend,
+                  termasuk desain tampilan, fungsionalitas, dan integrasi data.
+                </p>
+                <a
+                  href="https://codingstudio.id/blog/web-development-dan-jenisnya/"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/HCJ.png"
+                class="card-img-top"
+                alt="HTML CSS JS"
+              />
+              <div class="card-body">
+                <h5 class="card-title">HTML CSS JS</h5>
+                <p class="card-text">
+                  Membangun halaman web yang terstruktur, bergaya, dan
+                  interaktif dengan teknologi inti web development.
+                </p>
+                <a
+                  href="https://www.freecodecamp.org/news/html-css-and-javascript-explained-for-beginners/"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/backend.jpg"
+                class="card-img-top"
+                alt="Backend"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Backend</h5>
+                <p class="card-text">
+                  Menangani logika server, koneksi database, dan pengembangan
+                  API agar website dinamis dapat berjalan dengan baik.
+                </p>
+                <a
+                  href="https://www.revou.co/id/kosakata/backend"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/frontend.jpg"
+                class="card-img-top"
+                alt="Frontend"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Frontend</h5>
+                <p class="card-text">
+                  Merancang dan membuat antarmuka pengguna yang menarik,
+                  responsif, dan optimal di berbagai ukuran layar.
+                </p>
+                <a
+                  href="https://www.codepolitan.com/blog/mengenal-frontend-engineer-pengertian-tugas-dan-jenjang-karir/"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/react.js.jpg"
+                class="card-img-top"
+                alt="React JS"
+              />
+              <div class="card-body">
+                <h5 class="card-title">React JS</h5>
+                <p class="card-text">
+                  Library JavaScript untuk membangun antarmuka pengguna yang
+                  cepat, modular, dan dinamis untuk aplikasi web modern.
+                </p>
+                <a
+                  href="https://www.codepolitan.com/blog/belajar-react-js-pemula/"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/twdcss.jpg"
+                class="card-img-top"
+                alt="Tailwind CSS"
+                style="object-fit: cover"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tailwind CSS</h5>
+                <p class="card-text">
+                  Framework CSS utility-first untuk desain UI cepat dengan gaya
+                  responsif dan kustomisasi fleksibel.
+                </p>
+                <a
+                  href="https://daily.dev/blog/tailwind-css-basics-for-beginners"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/bootstrap.jpg"
+                class="card-img-top"
+                alt="Bootstrap 5"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Bootstrap 5</h5>
+                <p class="card-text">
+                  Toolkit frontend responsif dengan komponen siap pakai dan
+                  sistem layout untuk mempercepat pengembangan web.
+                </p>
+                <a
+                  href="https://www.w3schools.com/bootstrap5/bootstrap_get_started.php"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/vue.js.jpg"
+                class="card-img-top"
+                alt="Vue.js"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Vue.js</h5>
+                <p class="card-text">
+                  Framework JavaScript progresif untuk membuat antarmuka
+                  pengguna yang reaktif dan efisien dengan sintaks yang bersih.
+                </p>
+                <a
+                  href="https://www.petanikode.com/vuejs-untuk-pemula/"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/Lrvel.jpg"
+                class="card-img-top"
+                alt="Laravel"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Laravel</h5>
+                <p class="card-text">
+                  Framework PHP yang kuat untuk sistem backend, API RESTful, dan
+                  aplikasi web berbasis database.
+                </p>
+                <a
+                  href="https://www.rumahweb.com/journal/belajar-laravel/"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/node,js.jpg"
+                class="card-img-top"
+                alt="Node.js"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Node.js</h5>
+                <p class="card-text">
+                  Environment runtime JavaScript untuk menjalankan kode di
+                  server dan membangun aplikasi backend yang skalabel.
+                </p>
+                <a
+                  href="http://www.w3schools.com/nodejs/"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                id="img-style"
+                src="img/img/myskills/nihongo.jpg"
+                class="card-img-top"
+                alt="Japanese Language"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Japanese Language</h5>
+                <p class="card-text">
+                  Pemahaman dasar tata bahasa Jepang, kosakata, dan percakapan
+                  untuk penggunaan dan komunikasi sehari-hari.
+                </p>
+                <a
+                  href="https://youtube.com/@ryusensei_id?si=ItNNPha4MdrbNZwA"
+                  class="btn btn-primary btn-sm"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project ku -->
+    <section id="projects" class="bg-light py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">✨ My Projects ✨</h2>
+          <p class="text-muted">
+            Berikut adalah kumpulan karya yang pernah saya buat, mulai dari web
+            sederhana hingga eksperimen personal selama menjadi murid di ekskul
+            web development
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-lg h-100">
+              <img
+                src="img/img/myprojects/loginisekai.png"
+                class="card-img-top"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Login Isekai</h5>
+                <p class="card-text">
+                  Halaman login sederhana untuk portal dunia isekai.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-lg h-100">
+              <img
+                src="img/img/myprojects/listwaifu.png"
+                class="card-img-top"
+                alt="Project 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Waifu List</h5>
+                <p class="card-text">
+                  List waifu pribadi yang saya buat karena saya otaku sejati 🤓.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-lg h-100">
+              <img
+                src="img/img/myprojects/animancok1.png"
+                class="card-img-top"
+                alt="Project 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Anime Web v1</h5>
+                <p class="card-text">
+                  Website anime pertama saya, dibangun menggunakan template.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-lg h-100">
+              <img
+                src="img/img/myprojects/animancok2.png"
+                class="card-img-top"
+                alt="Project 4"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Anime Web Page 2</h5>
+                <p class="card-text">
+                  Halaman lanjutan dari website anime saya.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-lg h-100">
+              <img
+                src="img/img/myprojects/porto1.png"
+                class="card-img-top"
+                alt="Project 5"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Portofolio V1</h5>
+                <p class="card-text">
+                  Portofolio pertama saya, dibuat full dengan kemampuan sendiri.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-lg h-100">
+              <img
+                src="img/img/myprojects/myskills.png"
+                class="card-img-top"
+                alt="Project 6"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Skills Showcase</h5>
+                <p class="card-text">
+                  Menampilkan daftar kemampuan saya secara visual.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-lg h-100">
+              <img
+                src="img/img/myprojects/templatelugx.png"
+                class="card-img-top"
+                alt="Project 7"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Lugx Template Web</h5>
+                <p class="card-text">
+                  Website yang saya bangun dari template LUGX.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-lg h-100">
+              <img
+                src="img/img/myprojects/porto2.png"
+                class="card-img-top"
+                alt="Project 8"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Portofolio V2</h5>
+                <p class="card-text">
+                  Versi kedua dari portofolio saya, sekalian belajar Bootstrap.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 9 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-lg h-100">
+              <img
+                src="img/img/myprojects/blade.png"
+                class="card-img-top"
+                alt="Project 9"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Laravel Blade</h5>
+                <p class="card-text">
+                  Website database sederhana dengan Laravel Herd & Blade.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="d-flex justify-content-center align-items-center mb-5">
+        <a href="./kata.html" class="btn btn-primary btn-lg fw-bold shadow">
+          Aku Punya Kata-Kata Buat Hari Ini!
+        </a>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+      <div class="container text-center">
+        <blockquote class="blockquote">
+          <p class="mb-4 fs-5 fst-italic">
+            "<strong>Penyendiri</strong> berpengalaman tidak akan terjebak dalam
+            perangkap yang sama, sebagai veteran dalam pertempuran kehidupan,
+            akulah yang terkuat dalam hal kekalahan, jadi sampai kapanpun aku
+            benci cewe baik."
+          </p>
+          <footer class="blockquote-footer text-white-50">
+            <strong>Lord</strong>
+            <cite title="Source Title">Hachiman Hikigaya</cite>
+          </footer>
+        </blockquote>
+        <hr class="border-light my-4" />
+        <p class="mb-0">
+          &copy; 2025 <strong>RyuuDev</strong>. Di balik layar ini, ada
+          seseorang yang sedang bertahan.
+        </p>
+      </div>
+    </footer>
+
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
